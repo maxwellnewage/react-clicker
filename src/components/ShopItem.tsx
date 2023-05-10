@@ -1,7 +1,6 @@
 import React from "react";
 import { BsHandIndexThumb } from "react-icons/bs";
 import { ItemType } from "../../data/shop_items";
-import { Icon } from "react-icons/md";
 
 interface ShopItemProps {
   action: ("C" | "V"),
