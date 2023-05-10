@@ -11,28 +11,21 @@ function ShopItem({ item }: ShopItemProps) {
   return (
     <div className="row m-2">
       <div className="col">
-        <h4>
-          <item.icon />
-        </h4>
-        <h4>{item.name}</h4>
+        <span>
+          <item.icon size="50" />
+        </span>
+        <span className="ms-3">{item.name}</span>
       </div>
 
       <div className="col">
-        <div className="row">
-            <div className="col">
-                <button className="btn btn-success">
-                    <h4>${item.cost}</h4>
-                </button>
-            </div>
+        <button className="btn btn-success">
+          <h5>${item.cost}</h5>
+        </button>
 
-            <div className="col">
-                <button className="btn btn-danger">
-                    <h4>${itemSellingCost}</h4>
-                </button>
-            </div>
-        </div>
+        <button className="ms-3 btn btn-danger">
+          <h5>${itemSellingCost}</h5>
+        </button>
       </div>
-
     </div>
   );
 }
