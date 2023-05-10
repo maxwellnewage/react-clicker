@@ -1,9 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import cookieImage from "../images/cookie.png";
 import "./cookie.css";
+import CookieContext from "../context/CookieContext";
+
+
 
 function Cookie() {
-  const [cookieAmount, setCookieAmount] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
 
   const incrementCookie = () => {
@@ -16,6 +18,8 @@ function Cookie() {
       }, 100);
     }
   };
+
+  const {cookieAmount, setCookieAmount} = useContext(CookieContext)
 
   return (
     <div className="text-center">
