@@ -1,27 +1,38 @@
 import React from "react";
-import { BsHandIndexThumb } from "react-icons/bs";
 import { ItemType } from "../../data/shop_items";
 
 interface ShopItemProps {
-  action: ("C" | "V"),
-  item: ItemType
+  item: ItemType;
 }
 
-function ShopItem({ action, item }: ShopItemProps) {
-  const btnColor = action === "C" ? "btn btn-success" : "btn btn-danger"
-  const itemCost = action === "C" ? item.cost : item.cost / 2 
+function ShopItem({ item }: ShopItemProps) {
+  const itemSellingCost = item.cost / 2;
 
   return (
     <div className="row m-2">
-      <button className={btnColor}>
+      <div className="col">
+        <h4>
+          <item.icon />
+        </h4>
+        <h4>{item.name}</h4>
+      </div>
+
+      <div className="col">
         <div className="row">
-          <h4>
-            <item.icon />
-          </h4>
-          <h4>{item.name}</h4>
-          <h4>{itemCost}</h4>
+            <div className="col">
+                <button className="btn btn-success">
+                    <h4>${item.cost}</h4>
+                </button>
+            </div>
+
+            <div className="col">
+                <button className="btn btn-danger">
+                    <h4>${itemSellingCost}</h4>
+                </button>
+            </div>
         </div>
-      </button>
+      </div>
+
     </div>
   );
 }

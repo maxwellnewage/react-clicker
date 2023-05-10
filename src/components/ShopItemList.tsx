@@ -2,13 +2,9 @@ import React from "react";
 import items from "../../data/shop_items";
 import ShopItem from "./ShopItem";
 
-interface ShopItemListProps {
-  action: "C" | "V";
-}
-
-function ShopItemList({ action }: ShopItemListProps) {
+function ShopItemList() {
   const itemList = items.map((item, index) => (
-    <ShopItem key={index} action={action} item={item} />
+    <ShopItem key={index} item={item} />
   ));
 
   return <>{itemList}</>;
