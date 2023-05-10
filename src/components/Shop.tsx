@@ -1,11 +1,11 @@
-import React from 'react'
+import React from "react";
 
 function Shop() {
   return (
-    <div>
-      Tabla tienda
+    <div className="text-center">
+      <h1>Tabla tienda</h1>
     </div>
-  )
+  );
 }
 
-export default Shop
+export default Shop;
