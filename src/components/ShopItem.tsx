@@ -6,7 +6,7 @@ interface ShopItemProps {
   item: ItemType;
 }
 
-function ShopItem({ item }: ShopItemProps) {
+const ShopItem: React.FC<ShopItemProps> = ({ item }) => {
   const itemSellingCost = item.cost / 2;
   const {cookieAmount, setCookieAmount} = useContext(CookieContext)
 

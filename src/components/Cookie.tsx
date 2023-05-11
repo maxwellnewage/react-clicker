@@ -4,9 +4,9 @@ import "./cookie.css";
 import CookieContext from "../context/CookieContext";
 
 
-
-function Cookie() {
+const Cookie: React.FC = () => {
   const [isAnimating, setIsAnimating] = useState(false);
+  const {cookieAmount, setCookieAmount} = useContext(CookieContext)
 
   const incrementCookie = () => {
     if (!isAnimating) {
@@ -18,8 +18,6 @@ function Cookie() {
       }, 100);
     }
   };
-
-  const {cookieAmount, setCookieAmount} = useContext(CookieContext)
 
   return (
     <div className="text-center">

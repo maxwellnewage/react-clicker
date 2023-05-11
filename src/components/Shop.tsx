@@ -1,7 +1,7 @@
 import React from "react";
 import ShopItemList from "./ShopItemList";
 
-function Shop() {
+const Shop: React.FC = () => {
   return (
     <div className="text-center">
       <h1>Tienda</h1>
