@@ -4,7 +4,7 @@ import ShopItem from "./ShopItem";
 
 const ShopItemList: React.FC = () => {
   const itemList = items.map((item, index) => (
-    <ShopItem key={index} item={item} />
+    <ShopItem key={index} shopItem={item} />
   ));
 
   return <>{itemList}</>;
