@@ -1,0 +1,33 @@
+{
+    "Instrucciones": [
+        "[No copiar este atributo]",
+        "En VSC, abre el menú File y haz clic en Preferences, luego en User Snippets",
+        "Seleccione New Global Snippet.",
+        "En la pantalla de configuración del snippet, escriba un nombre para su snippet personalizado y pegue el siguiente código:",
+        "Guarda el archivo y ciérralo.",
+        "Abre un .tsx donde deseas generar el código del componente de React.",
+        "Escribe 'rc' (prefix del snippet) seguido de la tecla Tab",
+        "Genera componentes bonitos :D"
+    ],
+	"React Component with Props": {
+    "prefix": "rc",
+    "body": [
+      "import React from 'react';",
+      "",
+      "interface Props {",
+      "  $1",
+      "}",
+      "",
+      "const ${TM_FILENAME_BASE}: React.FC<Props> = ({ $1 }) => {",
+      "  return (",
+      "    <div>",
+      "      $2",
+      "    </div>",
+      "  );",
+      "};",
+      "",
+      "export default ${TM_FILENAME_BASE};"
+    ],
+    "description": "React Component with Props"
+  }
+}
