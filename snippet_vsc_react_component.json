@@ -9,7 +9,7 @@
         "Escribe 'rc' (prefix del snippet) seguido de la tecla Tab",
         "Genera componentes bonitos :D"
     ],
-	"React Component with Props": {
+    "React Component with Props": {
     "prefix": "rc",
     "body": [
       "import React from 'react';",
