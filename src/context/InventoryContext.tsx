@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React from "react";
 import { ItemType } from "../../data/shop_items";
 
 export type InventoryType = {
