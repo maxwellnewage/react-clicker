@@ -2,6 +2,7 @@ import React, { useState, useContext } from "react";
 import cookieImage from "../images/cookie.png";
 import "./cookie.css";
 import CookieContext from "../context/CookieContext";
+import CookieCounter from "./CookieCounter";
 
 
 const Cookie: React.FC = () => {
@@ -21,7 +22,7 @@ const Cookie: React.FC = () => {
 
   return (
     <div className="text-center">
-      <h1>{cookieAmount} galletas</h1>
+      <CookieCounter increment={cookieAmount} />
       <img
         className={`cookie-img ${isAnimating ? "cookie-img--animated" : ""}`}
         width="450"
