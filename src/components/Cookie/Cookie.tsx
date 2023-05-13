@@ -1,5 +1,5 @@
 import React, { useState, useContext } from "react";
-import cookieImage from "../images/cookie.png";
+import cookieImage from "../../images/cookie.png";
 import "./cookie.css";
 import CookieContext from "../../context/CookieContext";
 import CookieCounter from "../CookieCounter";
