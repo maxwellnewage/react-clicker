@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
-import { ItemType } from "../../data/shop_items";
-import CookieContext from "../context/CookieContext";
-import useInventory from "../hooks/useInventory";
+import { ItemType } from "../../../data/shop_items";
+import CookieContext from "../../context/CookieContext";
+import useInventory from "../../hooks/useInventory";
 
 interface ShopItemProps {
   shopItem: ItemType;
