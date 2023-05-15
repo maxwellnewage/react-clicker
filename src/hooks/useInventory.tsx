@@ -1,4 +1,4 @@
-import { useState, useEffect, useContext } from "react";
+import { useContext } from "react";
 import { ItemType } from "../../data/shop_items";
 import InventoryContext, { InventoryType } from "../context/InventoryContext";
 
