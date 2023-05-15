@@ -10,7 +10,7 @@ const CookieCounter: React.FC = () => {
   useEffect(() => {
     const intervalId = setInterval(() => {
       setCookieAmount(cookieAmount + giveInventory);
-    }, 10);
+    }, 100);
 
     return () => clearInterval(intervalId);
   }, [cookieAmount]);
@@ -24,6 +24,7 @@ const CookieCounter: React.FC = () => {
       <h1>
         {Math.floor(cookieAmount)} galletas
       </h1>
+      <h2>{giveInventory.toFixed(2)} g/s</h2>
     </div>
   );
 };
