@@ -12,7 +12,7 @@ const Cookie: React.FC = () => {
   const incrementCookie = () => {
     if (!isAnimating) {
       setIsAnimating(true);
-      setCookieAmount(cookieAmount + 1);
+      setCookieAmount(cookieAmount + 1)
 
       setTimeout(() => {
         setIsAnimating(false);
@@ -22,7 +22,7 @@ const Cookie: React.FC = () => {
 
   return (
     <div className="text-center">
-      <CookieCounter increment={cookieAmount} />
+      <CookieCounter />
       <img
         className={`cookie-img ${isAnimating ? "cookie-img--animated" : ""}`}
         width="450"

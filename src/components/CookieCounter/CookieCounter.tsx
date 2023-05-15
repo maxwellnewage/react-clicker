@@ -1,27 +1,28 @@
-import React, { useEffect, useState } from "react";
-import CountUp from "react-countup";
+import React, { useContext, useEffect, useState } from "react";
+import CookieContext from "../../context/CookieContext";
+import useInventory from "../../hooks/useInventory";
 
-interface Props {
-  increment: number;
-}
-
-const CookieCounter: React.FC<Props> = ({ increment }) => {
-  const [count, setCount] = useState(0);
-  const [previousCount, setPreviousCount] = useState(increment);
+const CookieCounter: React.FC = () => {
+  const {cookieAmount, setCookieAmount} = useContext(CookieContext)
+  const { inventory, getTotalGiveInventory } = useInventory();
+  const [giveInventory, setGiveInventory] = useState(0)
 
   useEffect(() => {
     const intervalId = setInterval(() => {
-      setPreviousCount(count);
-      setCount(count + increment);
-    }, 1000);
+      setCookieAmount(cookieAmount + giveInventory);
+    }, 10);
 
     return () => clearInterval(intervalId);
-  }, [count]);
+  }, [cookieAmount]);
+
+  useEffect(() => {
+    setGiveInventory(getTotalGiveInventory())
+  }, [inventory])
 
   return (
     <div>
       <h1>
-        <CountUp start={previousCount} end={count} duration={0.5} />
+        {Math.floor(cookieAmount)} galletas
       </h1>
     </div>
   );

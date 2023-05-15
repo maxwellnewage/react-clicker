@@ -16,37 +16,37 @@ const items: ItemType[] = [
         name: "Cursor",
         icon: BsHandIndexThumb,
         cost: 1,
-        give: 1
+        give: 0.01
     },
     {
         name: "Abuela",
         icon: MdElderlyWoman,
         cost: 5,
-        give: 2
+        give: 0.02
     },
     {
         name: "Granja",
         icon: GiFarmTractor,
         cost: 10,
-        give: 5
+        give: 0.05
     },
     {
         name: "Mina",
         icon: BsMinecartLoaded,
         cost: 20,
-        give: 7
+        give: 0.07
     },
     {
         name: "Fabrica",
         icon: MdFactory,
         cost: 50,
-        give: 10
+        give: 0.10
     },
     {
         name: "Banca",
         icon: BsBank,
         cost: 100,
-        give: 25
+        give: 0.25
     },
 ]
 
