@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { ItemType } from "../../data/shop_items";
+import { ItemMethodEnum, ItemType } from "../../data/shop_items";
 import InventoryContext, { InventoryType } from "../context/InventoryContext";
 
 const useInventory = () => {
@@ -30,17 +30,14 @@ const useInventory = () => {
       i.shopItem.name === existingItem.shopItem.name ? { ...i, amount: updatedAmount } : i
     );
 
-    console.log(updatedInventory)
-
     setInventory(updatedInventory);
   };
 
-  const getTotalGiveInventory = () => {
-    return inventory.reduce((accumulator, inv) => {
-      const amount = inv.amount
-      const shopItemGive = inv.shopItem.give
+  const getTotalGiveInventory = (method: ItemMethodEnum) => {
+    const inventoryByMethod = inventory.filter((inv) => inv.shopItem.method === method)
 
-      return accumulator + (shopItemGive * amount)
+    return inventoryByMethod.reduce((accumulator, inv) => {
+      return accumulator + (inv.amount * inv.shopItem.give)
     }, 0)
   }
 

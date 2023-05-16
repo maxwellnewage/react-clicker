@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import CookieContext from "../../context/CookieContext";
 import useInventory from "../../hooks/useInventory";
+import { ItemMethodEnum } from "data/shop_items";
 
 const CookieCounter: React.FC = () => {
   const {cookieAmount, setCookieAmount} = useContext(CookieContext)
@@ -16,7 +17,7 @@ const CookieCounter: React.FC = () => {
   }, [cookieAmount]);
 
   useEffect(() => {
-    setGiveInventory(getTotalGiveInventory())
+    setGiveInventory(getTotalGiveInventory(ItemMethodEnum.A))
   }, [inventory])
 
   return (
